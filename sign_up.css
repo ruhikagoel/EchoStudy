@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #b5f1df;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    max-width: 100%;
+}
+
+.logo-link {
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.logo {
+    width: auto;
+    height: 50px;
+}
+
+.sign-up-box {
+    margin-bottom: 25px;
+}
+
+.sign-up-box h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+.sign-up-box p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+
+.sign-up-box input[type="text"],
+.sign-up-box input[type="email"],
+.sign-up-box input[type="password"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.sign-up-box input[type="text"]:focus,
+.sign-up-box input[type="email"]:focus,
+.sign-up-box input[type="password"]:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.sign-up-box button.sign-up-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.sign-up-box button.sign-up-btn:hover {
+    background-color: #217dbb;
+}
+
+.sign-up-box .login-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.sign-up-box .login-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sign-up-box .login-link a:hover {
+    text-decoration: underline;
+}
+
+.google-sign-up {
+    background-color: #fff;
+    color: #333;
+    padding: 12px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.google-sign-up:hover {
+    background-color: #f8f8f8;
+    border-color: #ccc;
+}
+
+.google-sign-up::before {
+    content: '';
+    /* Placeholder for Google icon */
+    /* You'd replace this with your actual Google icon implementation */
+    /* For example, if you're using a font icon library like Font Awesome: */
+    /* font-family: 'Font Awesome 5 Brands'; */
+    /* content: '\f1a0'; */
+    /* font-size: 1.2em; */
+    /* color: #db4437; */
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    .logo {
+        height: 40px;
+    }
+    .sign-up-box h2 {
+        font-size: 24px;
+    }
+     .sign-up-box p{
+        font-size: 14px;
+    }
+}

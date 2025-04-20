@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #222;
+}
+
+header {
+  background-color: #b5f1df;
+  padding: 1rem;
+  border-bottom: 2px solid #000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  background-color: #000;
+  color: #b5f1df;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 4px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: white;
+}
+
+nav a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+main {
+  padding: 2rem;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screenshot-placeholder {
+  width: 100%;
+  height: 200px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.features ul {
+  list-style: square;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.features h2 {
+  margin-bottom: 1rem;
+}
+
+.mission, .problem {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
