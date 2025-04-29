@@ -1,0 +1,177 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EchoStudy</title>
+  <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">ECHOSTUDY</div>
+    
+    <div class="buttons">
+      <button id="todoBtn">TO DO</button>
+      <button id="profileBtn">PROFILE</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="assignment-board">
+      <div class="column">
+        <h2>TO-DO LIST</h2>
+        <ul id="assignmentList"></ul>
+      </div>
+      <div class="column">
+        <h2>DATE DUE</h2>
+        <ul id="dueDateList"></ul>
+      </div>
+      <div class="column">
+        <h2>CATEGORY</h2>
+        <ul id="categoryList"></ul>
+      </div>
+      <div class="numbers-panel">
+        <h3>BIG NUMBERS HERE:</h3>
+        <p>Currently Working On: <span id="currentTask">None</span></p>
+        <p>Time Working: <span id="timeWorking">0 min</span></p>
+        <p>Completed Today: <span id="completedToday">0</span></p>
+        <p>Total Tasks: <span id="totalTasks">0</span></p>
+      </div>
+    </section>
+
+    <section class="add-assignment">
+      <input type="text" id="assignmentName" placeholder="Assignment Name">
+      <input type="date" id="assignmentDueDate">
+      <input type="text" id="assignmentCategory" placeholder="Category">
+      <button id="addAssignmentBtn">Add Assignment</button>
+    </section>
+  </main>
+
+  <div class="modal" id="reflectionModal">
+    <div class="modal-content">
+      <h2>Reflection</h2>
+      <p>Completed? (Series of Yes/No Questions)</p>
+      <div class="modal-buttons">
+        <button id="noBtn" class="no">NO</button>
+        <button id="yesBtn" class="yes">YES</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="todo.js"></script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoStudy Assignments</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <header>
+        <h1>EchoStudy Assignment Tracker</h1>
+    </header>
+
+    <main>
+        <section class="todo">
+            <div class="add-task">
+                <input type="text" id="assignmentName" placeholder="Assignment name">
+                <input type="text" id="assignmentSubject" placeholder="Subject">
+                <input type="date" id="assignmentDueDate">
+                <button onclick="addAssignment()">Add Assignment</button>
+            </div>
+
+            <ul id="assignmentList"></ul>
+        </section>
+    </main>
+
+    <div id="reflectionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Quick Reflection</h2>
+            <textarea id="reflectionText" placeholder="How did you feel during this assignment?"></textarea>
+            <button onclick="submitReflection()">Submit Reflection</button>
+        </div>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EchoStudy Assignment Tracker</title>
+  <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">ECHOSTUDY</div>
+      <nav>
+        <button class="tab active" id="tab-todo">TO DO</button>
+        <button class="tab" id="tab-history">REFLECTION HISTORY</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="todo-section" class="section">
+      <div class="controls">
+        <button id="addBtn">+ New Assignment</button>
+      </div>
+      <table class="todo-table">
+        <thead>
+          <tr><th>To-Do</th><th>Due Date</th><th>Category</th><th>Time Spent</th><th>Action</th></tr>
+        </thead>
+        <tbody id="todo-body"></tbody>
+      </table>
+      <div class="stats">
+        <div><strong>Working On:</strong> <span id="current-task">None</span></div>
+        <div><strong>Time Today:</strong> <span id="time-today">0m</span></div>
+        <div><strong>Completed Today:</strong> <span id="completed-today">0</span></div>
+        <div><strong>Total Tasks:</strong> <span id="total-tasks">0</span></div>
+      </div>
+    </section>
+
+    <section id="history-section" class="section hidden">
+      <h2>Reflection History</h2>
+      <ul id="history-list" class="history-list"></ul>
+    </section>
+  </main>
+
+  <!-- New Assignment Modal -->
+  <div id="modal-add" class="modal hidden">
+    <div class="modal-content">
+      <h3>New Assignment</h3>
+      <input id="inp-name" placeholder="Name">
+      <input id="inp-date" type="date">
+      <input id="inp-cat" placeholder="Category">
+      <button id="save-add">Add</button>
+      <button class="close-btn" data-close>Cancel</button>
+    </div>
+  </div>
+
+  <!-- Reflection Modal -->
+  <div id="modal-reflect" class="modal hidden">
+    <div class="modal-content">
+      <h3>Reflection</h3>
+      <p>Did you complete the task?</p>
+      <div class="btn-group">
+        <button id="ref-no">No</button>
+        <button id="ref-yes">Yes</button>
+      </div>
+      <button class="close-btn" data-close>Close</button>
+    </div>
+  </div>
+
+  <script src="todo.js"></script>
+</body>
+</html>
