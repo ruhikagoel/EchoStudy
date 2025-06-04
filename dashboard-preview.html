@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f9f7f0;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .dashboard-mock {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            width: 800px;
+            height: 500px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .stat-card {
+            background: #b5f1df;
+            padding: 15px;
+            border-radius: 8px;
+            height: 80px;
+        }
+        .content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+        .tasks {
+            background: #f9f7f0;
+            padding: 20px;
+            border-radius: 8px;
+            height: 300px;
+        }
+        .sidebar {
+            background: #f9f7f0;
+            padding: 20px;
+            border-radius: 8px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-mock">
+        <div class="header">
+            <div style="width: 120px; height: 40px; background: #b5f1df; border-radius: 6px;"></div>
+            <div style="width: 80px; height: 40px; background: #eee; border-radius: 6px;"></div>
+        </div>
+        <div class="stats">
+            <div class="stat-card"></div>
+            <div class="stat-card"></div>
+            <div class="stat-card"></div>
+            <div class="stat-card"></div>
+        </div>
+        <div class="content">
+            <div class="tasks"></div>
+            <div class="sidebar"></div>
+        </div>
+    </div>
+</body>
+</html> 
