@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - EchoStudy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="profile-page">
+    <header class="dashboard-header">
+        <div class="header-left">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="EchoStudy Logo" class="dashboard-logo">
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="dashboard.html" class="btn btn-secondary">
+                <i class="fas fa-th-large"></i>
+                Dashboard
+            </a>
+        </div>
+    </header>
+
+    <main class="profile-content">
+        <div class="profile-grid">
+            <!-- Study Stats Section -->
+            <section class="profile-stats">
+                <h2>Study Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>TOTAL STUDY TIME</h3>
+                        <p class="stat-value" data-stat="totalTime">0 hours</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>TASKS COMPLETED</h3>
+                        <p class="stat-value" data-stat="totalTasks">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>AVERAGE FOCUS SCORE</h3>
+                        <p class="stat-value" data-stat="avgFocus">0%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>STUDY STREAK</h3>
+                        <p class="stat-value" data-stat="streak">0 days</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Study History Section -->
+            <section class="study-history">
+                <h2>Study History</h2>
+                <div class="history-filters">
+                    <button class="btn btn-secondary active" data-filter="week">This Week</button>
+                    <button class="btn btn-secondary" data-filter="month">This Month</button>
+                    <button class="btn btn-secondary" data-filter="all">All Time</button>
+                </div>
+                <div class="history-list">
+                    <!-- Study history will be dynamically added here -->
+                </div>
+            </section>
+
+            <!-- Recent Reflections -->
+            <section class="reflections">
+                <h2>Recent Reflections</h2>
+                <div class="reflection-list">
+                    <!-- Reflections will be dynamically added here -->
+                </div>
+            </section>
+
+            <!-- Category Analysis -->
+            <section class="category-analysis">
+                <h2>Category Analysis</h2>
+                <div class="category-stats">
+                    <!-- Category stats will be dynamically added here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="profile.js"></script>
+</body>
+</html> 
