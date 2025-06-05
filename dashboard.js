@@ -190,6 +190,9 @@ function startTimer(taskId) {
     }, 1000);
     
     document.getElementById('currentTaskName').textContent = currentTask.title;
+
+    // Add tab visibility detection
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 }
 
 function stopTimer() {
@@ -205,10 +208,61 @@ function stopTimer() {
         document.getElementById('timerDisplay').textContent = '00:00';
         document.getElementById('currentTaskName').textContent = 'No task selected';
         
+        // Remove tab visibility detection
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+        
         if (currentTask) {
             showReflectionModal(currentTask.id);
             saveTasks();
         }
+    }
+}
+
+// Tab visibility handling
+function handleVisibilityChange() {
+    console.log('Visibility changed:', document.hidden);
+    if (document.hidden && timerRunning) {
+        console.log('Timer was running, showing notification');
+        showTimerNotification();
+        pauseTimer();
+    }
+}
+
+function pauseTimer() {
+    if (currentTimer) {
+        clearInterval(currentTimer);
+        currentTimer = null;
+        timerRunning = false;
+        saveTasks();
+    }
+}
+
+function showTimerNotification() {
+    console.log('Showing notification');
+    const notification = document.createElement('div');
+    notification.className = 'timer-notification';
+    notification.innerHTML = `
+        <div class="notification-content">
+            <i class="fas fa-clock"></i>
+            <p>Timer paused! Switching tabs will pause your study session.</p>
+            <button class="btn btn-primary" onclick="closeNotification(this)">
+                Got it
+            </button>
+        </div>
+    `;
+    document.body.appendChild(notification);
+
+    // Remove notification after 5 seconds
+    setTimeout(() => {
+        closeNotification(notification.querySelector('button'));
+    }, 5000);
+}
+
+function closeNotification(button) {
+    const notification = button.closest('.timer-notification');
+    if (notification) {
+        notification.classList.add('hiding');
+        setTimeout(() => notification.remove(), 300);
     }
 }
 
