@@ -1,6 +1,7 @@
 The goal of this project is to provide academically-inclined students with the tools to manage their time, enhance their focus, and achieve their goals, so they are able to be productive and successful.
 
 The key features in this work management website are:
+
     - Daily Study Log: Track the subjects and tasks you are completing each day in a clean, simple format.
     - Built-in Focus Timer: Record exactly how long you spend on each subject
     - Mini Reflections: Quickly reflect on how you felt about the session: focused? distracted? why?
