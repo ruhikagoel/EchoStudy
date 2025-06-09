@@ -1,0 +1,30 @@
+[debug] [2025-06-05T21:51:46.842Z] ----------------------------------------------------------------------
+[debug] [2025-06-05T21:51:46.845Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ruhik\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2025-06-05T21:51:46.846Z] CLI Version:   14.6.0
+[debug] [2025-06-05T21:51:46.846Z] Platform:      win32
+[debug] [2025-06-05T21:51:46.846Z] Node Version:  v22.16.0
+[debug] [2025-06-05T21:51:46.846Z] Time:          Thu Jun 05 2025 14:51:46 GMT-0700 (Pacific Daylight Time)
+[debug] [2025-06-05T21:51:46.846Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-05T21:51:46.848Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] i  Firebase CLI integrates with Gemini in Firebase API to provide assistant features. Learn more about using Gemini in Firebase and how we train our models: https://firebase.google.com/docs/gemini-in-firebase/set-up-gemini#required-permissions 
+[debug] [2025-06-05T21:51:47.222Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-06-05T21:51:47.223Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you. 
+[info] 
+[info] i  To change your the preference at any time, run `firebase logout` and `firebase login` again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=714005039&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2025-06-06T04:05:51.139Z] ----------------------------------------------------------------------
+[debug] [2025-06-06T04:05:51.154Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ruhik\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2025-06-06T04:05:51.155Z] CLI Version:   14.6.0
+[debug] [2025-06-06T04:05:51.156Z] Platform:      win32
+[debug] [2025-06-06T04:05:51.156Z] Node Version:  v22.16.0
+[debug] [2025-06-06T04:05:51.157Z] Time:          Thu Jun 05 2025 21:05:51 GMT-0700 (Pacific Daylight Time)
+[debug] [2025-06-06T04:05:51.158Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase CLI integrates with Gemini in Firebase API to provide assistant features. Learn more about using Gemini in Firebase and how we train our models: https://firebase.google.com/docs/gemini-in-firebase/set-up-gemini#required-permissions 

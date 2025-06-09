@@ -3,17 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Practoice</title>
-</head>
-<body>
-    
-</body>
-</html>
-=======
+  
     <title>EchoStudy - Study Smarter, Not Harder</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="slideshow.js" defer></script>
+    
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-analytics.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBKo4eVU8IB9Uo7kc9Eo12ZMZ_JDrt5Hkc",
+            authDomain: "echostudy-e04db.firebaseapp.com",
+            projectId: "echostudy-e04db",
+            storageBucket: "echostudy-e04db.firebasestorage.app",
+            messagingSenderId: "42094151583",
+            appId: "1:42094151583:web:172cd320a3d83626301faa",
+            measurementId: "G-VEPPHJE5KT"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </head>
 <body>
     <header>
@@ -45,7 +61,26 @@
                 </a>
             </div>
             <div class="hero-image">
-                <img src="dashboard-preview.png" alt="EchoStudy Dashboard Preview" class="dashboard-preview">
+                <div class="slideshow-container">
+                    <div class="slides fade">
+                        <img src="images/slideshow/dashboard-overview.png" alt="Dashboard Overview">
+                    </div>
+                    <div class="slides fade">
+                        <img src="images/slideshow/focus-timer.png" alt="Focus Timer Feature">
+                    </div>
+                    <div class="slides fade">
+                        <img src="images/slideshow/progress-tracking.png" alt="Progress Tracking">
+                    </div>
+                    <div class="slides fade">
+                        <img src="images/slideshow/study-analytics.png" alt="Study Analytics">
+                    </div>
+                    <div class="slides fade">
+                        <img src="images/slideshow/task-management.png" alt="Task Management">
+                    </div>
+
+                    <a class="prev" onclick="changeSlide(-1)">❮</a>
+                    <a class="next" onclick="changeSlide(1)">❯</a>
+                </div>
             </div>
         </section>
 
@@ -168,4 +203,3 @@
     </footer>
 </body>
 </html> 
->>>>>>> 7fae3c41dd3add31b8cb89368c51cd77947a7c4a

@@ -6,47 +6,68 @@
     <title>Sign Up - EchoStudy</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-analytics.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBKo4eVU8IB9Uo7kc9Eo12ZMZ_JDrt5Hkc",
+            authDomain: "echostudy-e04db.firebaseapp.com",
+            projectId: "echostudy-e04db",
+            storageBucket: "echostudy-e04db.firebasestorage.app",
+            messagingSenderId: "42094151583",
+            appId: "1:42094151583:web:172cd320a3d83626301faa",
+            measurementId: "G-VEPPHJE5KT"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </head>
-<body class="auth-page">
-    <div class="auth-container">
-        <div class="auth-logo">
-            <img src="logo.png" alt="EchoStudy Logo">
-        </div>
-        <div class="auth-card">
-            <h1>Create Account</h1>
-            <form class="auth-form">
-                <div class="form-group">
-                    <label for="fullname">Full Name</label>
-                    <input type="text" id="fullname" name="fullname" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div class="form-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Create Account</button>
-            </form>
-            <div class="auth-divider">
-                <span>or</span>
+<body>
+    <div class="auth-page">
+        <div class="auth-container">
+            <div class="auth-logo">
+                <img src="logo.png" alt="EchoStudy Logo">
             </div>
-            <button class="btn btn-google btn-block">
-                <i class="fab fa-google"></i>
-                Sign up with Google
-            </button>
-            <p class="auth-links">
-                Already have an account? <a href="login.html">Log in</a>
-            </p>
-            <p class="auth-links">
-                <a href="index.html">Back to Home</a>
-            </p>
+            <div class="auth-card">
+                <h2>Create Account</h2>
+                <div class="auth-error" style="display: none; color: #f44336; margin-bottom: 1rem;"></div>
+                <form class="auth-form" onsubmit="event.preventDefault(); signUpWithEmail(document.getElementById('email').value, document.getElementById('password').value, document.getElementById('name').value);">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required minlength="6">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Sign Up</button>
+                </form>
+                <div class="auth-divider">
+                    <span>or</span>
+                </div>
+                <button onclick="signInWithGoogle()" class="btn btn-google" style="width: 100%;">
+                    <i class="fab fa-google"></i>
+                    Continue with Google
+                </button>
+                <div class="auth-links">
+                    <p>Already have an account? <a href="login.html">Log In</a></p>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="firebase-auth.js"></script>
 </body>
 </html> 
