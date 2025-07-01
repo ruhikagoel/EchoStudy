@@ -6,24 +6,40 @@
     <title>Dashboard - EchoStudy</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
 </head>
 <body class="dashboard-page">
     <header class="dashboard-header">
-        <div class="header-left">
-            <a href="index.html" class="logo-link">
+        <div class="logo">
+            <a href="index.html">
                 <img src="logo.png" alt="EchoStudy Logo" class="dashboard-logo">
             </a>
         </div>
         <div class="header-right">
+            <!-- Reset Data Button -->
             <button class="btn btn-reset" onclick="resetData()">
                 <i class="fas fa-redo"></i>
                 Reset Data
             </button>
+
+            <div class="user-info">
+                <span>Welcome, </span>
+                <span class="user-name">Loading...</span>
+            </div>
+            <button onclick="signOut()" class="btn btn-secondary">
+                <i class="fas fa-sign-out-alt"></i>
+                Sign Out
+            </button>
+
+            <!-- Time and Profile Button -->
             <span class="time">10:00</span>
             <a href="profile.html" class="btn btn-profile">
                 <i class="fas fa-user"></i>
                 Profile
             </a>
+
+
         </div>
     </header>
 
@@ -132,5 +148,6 @@
     </main>
 
     <script src="dashboard.js"></script>
+    <script src="firebase-auth.js"></script>
 </body>
 </html> 
