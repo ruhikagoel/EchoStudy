@@ -1,0 +1,57 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #f8f9fa;
+    transition: background-color 0.3s;
+}
+
+header .btn {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+header .btn:hover {
+    background-color: #0056b3;
+}
+
+.task-list, .timer-section, .stat-card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+.dark-mode body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+.dark-mode header .btn {
+    background-color: #3a3a3a;
+    color: #ffffff;
+}
+
+.dark-mode header .btn:hover {
+    background-color: #5a5a5a;
+}
+
+.dark-mode .task-list, .dark-mode .timer-section, .dark-mode .stat-card {
+    background-color: #1e1e1e;
+    border: 1px solid #444444;
+}
+
+.dark-mode .modal-content {
+    background-color: #1e1e1e;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - EchoStudy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+</head>
+<body class="profile-page">
+    <header class="profile-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="EchoStudy Logo" class="profile-logo">
+            </a>
+        </div>
+        <div class="header-right">
+            <button class="btn btn-toggle-darkmode" onclick="toggleDarkMode()">
+                <i class="fas fa-moon"></i>
+                Toggle Dark Mode
+            </button>
+            <div class="user-info">
+                <span>Welcome, </span>
+                <span class="user-name">User Name</span>
+            </div>
+            <button onclick="signOut()" class="btn btn-secondary">
+                <i class="fas fa-sign-out-alt"></i>
+                Sign Out
+            </button>
+        </div>
+    </header>
+
+    <main class="profile-content">
+        <h1>User Profile</h1>
+        <div class="profile-details">
+            <h2>Profile Information</h2>
+            <p><strong>Email:</strong> user@example.com</p>
+            <p><strong>Joined:</strong> January 1, 2023</p>
+            <!-- Additional profile information can be added here -->
+        </div>
+    </main>
+
+    <script src="darkmode.js"></script>
+    <script src="firebase-auth.js"></script>
+</body>
+</html>

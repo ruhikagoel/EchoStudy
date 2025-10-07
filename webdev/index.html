@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - EchoStudy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+</head>
+<body class="home-page">
+    <header class="home-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="EchoStudy Logo" class="home-logo">
+            </a>
+        </div>
+        <div class="header-right">
+            <button class="btn btn-darkmode" id="darkModeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="user-info">
+                <span>Welcome, </span>
+                <span class="user-name">Loading...</span>
+            </div>
+            <button onclick="signOut()" class="btn btn-secondary">
+                <i class="fas fa-sign-out-alt"></i>
+                Sign Out
+            </button>
+        </div>
+    </header>
+
+    <main class="home-content">
+        <h1>Welcome to EchoStudy</h1>
+        <p>Your study dashboard awaits!</p>
+        <a href="dashboard.html" class="btn btn-primary">Go to Dashboard</a>
+        <a href="profile.html" class="btn btn-secondary">View Profile</a>
+    </main>
+
+    <script src="darkmode.js"></script>
+    <script src="firebase-auth.js"></script>
+</body>
+</html>
